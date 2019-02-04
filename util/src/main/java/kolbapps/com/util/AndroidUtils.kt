@@ -8,4 +8,11 @@ class AndroidUtils {
             Log.d("Teste lib", "Funcionou!!!")
         }
     }
+
+    external fun stringFromJNI(): String
+
+    fun testeNdk() {
+        System.loadLibrary("native-lib")
+        Log.d("Teste lib", stringFromJNI())
+    }
 }
